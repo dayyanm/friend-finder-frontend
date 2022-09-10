@@ -1,5 +1,7 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 import useLocalStorage from "../Hooks/useLocalStorage";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const AuthContext = createContext();
 
@@ -9,11 +11,10 @@ export function useAuth() {
 
 export function AuthProvider({ children }) {
   const [user, setUser] = useState();
-  const [loading, setLoading] = useState(true);
   const [token, setToken] = useLocalStorage("token", "");
+  const navigate = useNavigate();
 
   const login = async (googleData) => {
-    console.log(googleData);
     const res = await fetch(process.env.REACT_APP_API_URL + "auth/login", {
       method: "POST",
       body: JSON.stringify({
@@ -23,14 +24,14 @@ export function AuthProvider({ children }) {
         "Content-Type": "application/json",
       },
     });
+
     const data = await res.json();
-    console.log(data);
-    // if (data.loginValid) {
-    //     setToken(data.jtoken);
-    //     assignUser(true, data.jtoken);
-    // } else {
-    //     setLoginErr(data.message);
-    // }
+
+    if (data.loginValid) {
+      setToken(data.jtoken);
+      setUser(data);
+      navigate("../", { replace: true });
+    }
   };
 
   const logout = () => {
@@ -38,11 +39,9 @@ export function AuthProvider({ children }) {
     setToken("");
   };
 
+  useEffect(() => {}, [token]);
+
   const value = { user, login, logout };
 
-  return (
-    <AuthContext.Provider value={value}>
-      {loading && children}
-    </AuthContext.Provider>
-  );
+  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }

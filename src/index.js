@@ -5,6 +5,7 @@ import App from "./Routes/App";
 import Login from "./Routes/Login";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./Contexts/AuthContext";
+import PrivateRoute from "./Routes/PrivateRoute";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -13,6 +14,9 @@ root.render(
       <AuthProvider>
         <Routes>
           <Route path="/login" element={<Login />} />
+          <Route path="/" element={<PrivateRoute />}>
+            <Route path="/" element={<App />}></Route>
+          </Route>
         </Routes>
       </AuthProvider>
     </BrowserRouter>
