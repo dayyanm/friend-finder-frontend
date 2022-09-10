@@ -1,6 +1,15 @@
-import "./Results.css";
 import React from "react";
+import styles from './Results.css'
 
-export default function Results() {
-  return <div>Results</div>;
+const Results = (props) => {
+  return (
+    <div className={'results-container'}>
+      <img
+        src="../Assets/images/logo.png"
+        className={styles['image']}
+      />
+    </div>
+  )
 }
+
+export default Results

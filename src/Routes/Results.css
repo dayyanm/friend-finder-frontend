@@ -1,0 +1,15 @@
+
+
+.results-container {
+    width: 100%;
+    height: 99.9vh;
+    
+    background-image: url("../Assets/images/background.png");
+  
+}
+  .image {
+    width: 180px;
+    height: 189px;
+    align-self: center;
+    object-fit: cover;
+  }

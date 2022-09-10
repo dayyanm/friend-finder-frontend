@@ -6,6 +6,7 @@ import Login from "./Routes/Login";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { AuthProvider } from "./Contexts/AuthContext";
 import PrivateRoute from "./Routes/PrivateRoute";
+import Results from "./Routes/Results";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -17,7 +18,7 @@ root.render(
           <Route path="/login" element={<Login />} />
           <Route path="/" element={<PrivateRoute />}>
             <Route path="/" element={<App />}></Route>
-            <Route path="/results" element={<App />}></Route>
+            <Route path="/results" element={<Results />}></Route>
           </Route>
         </Routes>
       </AuthProvider>
