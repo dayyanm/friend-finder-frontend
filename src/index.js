@@ -7,7 +7,6 @@ import Results from "./Routes/Results";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { AuthProvider } from "./Contexts/AuthContext";
 import PrivateRoute from "./Routes/PrivateRoute";
-import Results from "./Routes/Results";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
