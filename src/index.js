@@ -17,6 +17,7 @@ root.render(
           <Route path="/login" element={<Login />} />
           <Route path="/" element={<PrivateRoute />}>
             <Route path="/" element={<App />}></Route>
+            <Route path="/results" element={<App />}></Route>
           </Route>
         </Routes>
       </AuthProvider>
