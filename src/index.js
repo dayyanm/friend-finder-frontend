@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./Assets/index.css";
 import App from "./Routes/App";
 import Login from "./Routes/Login";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { AuthProvider } from "./Contexts/AuthContext";
 import PrivateRoute from "./Routes/PrivateRoute";
 
@@ -13,6 +13,7 @@ root.render(
     <BrowserRouter>
       <AuthProvider>
         <Routes>
+          <Route path="*" element={<Navigate replace to="/" />} />
           <Route path="/login" element={<Login />} />
           <Route path="/" element={<PrivateRoute />}>
             <Route path="/" element={<App />}></Route>
