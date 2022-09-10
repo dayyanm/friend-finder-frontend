@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./Assets/index.css";
 import App from "./Routes/App";
 import Login from "./Routes/Login";
+import Results from "./Routes/Results";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { AuthProvider } from "./Contexts/AuthContext";
 import PrivateRoute from "./Routes/PrivateRoute";
