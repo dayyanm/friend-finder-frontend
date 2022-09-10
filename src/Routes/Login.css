@@ -1,0 +1,24 @@
+.login-container{
+    /* border: 10px solid red; */
+    width: 100%;
+    min-height: 99.9vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box{
+    border: 1px solid #d1b3c4;
+    background-color: #e8c2ca;
+    border-radius: 4px;
+    height: 400px;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.google-login-container{
+    /* border: 1px solid red; */
+    width: fit-content;
+}
