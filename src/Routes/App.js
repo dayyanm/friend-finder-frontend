@@ -87,6 +87,8 @@ function App() {
     };
 
     const submt = async () => {
+        let jtok = token;
+        console.log(typeof jtok)
         if (answers.length === 9 && !answers.includes(undefined)) {
             axios.post(
                 process.env.REACT_APP_API_URL + "api/createUserPreferences",
@@ -101,9 +103,7 @@ function App() {
                     languages: answers[8],
                 },
                 {
-                    headers: {
-                        Authorization: { Authorization: `Bearer ${token}` },
-                    },
+                     headers: {"Authorization" : `Bearer ${token}`}
                 }
             );
         }
