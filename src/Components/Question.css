@@ -1,10 +1,10 @@
-.question-container{
+.question-container {
     /* border: 1px solid red; */
     width: 80%;
     border-radius: 10px;
 }
 
-.question-header{
+.question-header {
     /* border: 1px solid red; */
     border-top-left-radius: inherit;
     border-top-right-radius: inherit;
@@ -14,25 +14,25 @@
     padding: 2px 10px;
 }
 
-.question-answer{
+.question-answer {
     background-color: #d1b3c4;
     border-bottom-left-radius: inherit;
     border-bottom-right-radius: inherit;
     padding: 20px;
 }
 
-.question-asnwer-list{
+.question-asnwer-list {
     list-style-type: lower-alpha;
 }
 
-.radio-set{
+.radio-set {
     outline: none;
     border: none;
     display: flex;
     flex-wrap: wrap;
 }
 
-.answer-label{
+.answer-label {
     /* border: 1px solid red; */
     width: 50%;
     display: flex;
@@ -41,6 +41,6 @@
     gap: 10px;
 }
 
-.radio-btn{
-    margin-top: 4px;
+.radio-btn {
+    /* margin-top: 4px; */
 }
