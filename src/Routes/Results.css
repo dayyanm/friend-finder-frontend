@@ -1,57 +1,56 @@
+@import url("https://fonts.googleapis.com/css?family=Grand+Hotel");
+@import url("https://fonts.googleapis.com/css?family=Antonio");
 
-
-
-@import url('https://fonts.googleapis.com/css?family=Grand+Hotel');
-@import url('https://fonts.googleapis.com/css?family=Antonio');
-
-  .results-container {
+.results-container {
     width: 100%;
     height: 99.9vh;
-    
+
     background-image: url("../Assets/images/background.png");
-  
 }
-  .main-row-container {
+.main-row-container {
     flex: 0 0 auto;
     display: flex;
     align-self: center;
     align-items: center;
     justify-content: center;
     padding-top: 30px;
-  }
-  .image {
+}
+.image {
     width: 120px;
     height: 129px;
     align-self: center;
-    object-fit:contain;
-  }
-  .main-text {
+    object-fit: contain;
+}
+.main-text {
     font-size: 70px;
     font-style: normal;
     font-weight: 400;
     padding-left: 15px;
-    font-family: 'Grand Hotel';
+    font-family: "Grand Hotel";
+}
 
-  }
-
-
-  .secondary-text {
+.secondary-text {
     padding-top: 10px;
     font-size: 70px;
     font-style: normal;
     font-weight: 500;
     padding-left: 70px;
-    font-family: 'Antonio';
+    font-family: "Antonio";
+}
 
-  }
-
-  .secondary-name-text {
+.secondary-name-text {
     padding-top: 10px;
     font-size: 70px;
     font-style: normal;
     font-weight: 500;
     padding-left: 70px;
-    font-family: 'Antonio';
+    font-family: "Antonio";
     color: white;
-    -webkit-text-stroke: 2px black; 
-  }
+    -webkit-text-stroke: 2px black;
+}
+
+#logout-result {
+    position: absolute;
+    bottom: 20px;
+    left: 47vw;
+}

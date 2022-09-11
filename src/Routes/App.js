@@ -3,10 +3,13 @@ import Question from "../Components/Question";
 import { useAuth } from "../Contexts/AuthContext";
 import { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function App() {
-    const { token } = useAuth();
+    const { token, logout } = useAuth();
     const [answers, setAnswers] = useState([]);
+
+    const navigate = useNavigate();
 
     const questionList = [
         "How old are you?",
@@ -87,8 +90,6 @@ function App() {
     };
 
     const submt = async () => {
-        let jtok = token;
-        console.log(typeof jtok)
         if (answers.length === 9 && !answers.includes(undefined)) {
             axios.post(
                 process.env.REACT_APP_API_URL + "api/createUserPreferences",
@@ -103,18 +104,25 @@ function App() {
                     languages: answers[8],
                 },
                 {
-                     headers: {"Authorization" : `Bearer ${token}`}
+                    headers: { Authorization: `Bearer ${token}` },
                 }
             );
+
+            navigate("../results");
         }
     };
 
     return (
         <div className="App">
-            <h1>Fill in Some Personal Info to Continue</h1>
+            <div className="header">
+                <h1>Fill in Some Personal Info to Continue</h1>
+                <button className="submit-btn" id="logout" onClick={logout}>
+                    Logout
+                </button>
+            </div>
             <div className="question-container-main">{generateQuestions()}</div>
             <div className="submit-btn-container">
-                <button id="submit-btn" onClick={submt}>
+                <button className="submit-btn" onClick={submt}>
                     Submit
                 </button>
             </div>

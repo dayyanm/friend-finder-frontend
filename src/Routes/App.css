@@ -8,6 +8,10 @@
     gap: 30px;
 }
 
+.header {
+    display: flex;
+}
+
 .question-container-main {
     width: 100%;
     flex: 1;
@@ -17,7 +21,7 @@
     gap: 20px;
     /* border: 1px solid red; */
 }
-#submit-btn {
+.submit-btn {
     margin: 20px;
     padding: 8px 25px;
     /* border: 1px solid rgb(117, 117, 117); */
@@ -27,4 +31,9 @@
     border-radius: 20px;
     background-color: #e5989b;
     cursor: pointer;
+}
+
+#logout {
+    position: absolute;
+    right: 10px;
 }
