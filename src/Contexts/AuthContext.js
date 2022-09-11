@@ -48,6 +48,7 @@ export function AuthProvider({ children }) {
   };
 
   const findFriend = () => {
+    console.log("in find");
     axios
       .post(
         process.env.REACT_APP_API_URL + "api/createMatch",
