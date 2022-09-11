@@ -16,11 +16,11 @@ function App() {
     "What year of University are you in?",
     "What's your faculty?",
     "Do you like fitness?",
-    "What are your hobbies?",
+    "What is your favourite hobby?",
     "What would you describe your sociability as?",
     "What would you request as your last meal on Death Row?",
     "Favorite animal?",
-    "Which of these languages do you speak? (This can have multiple selections)",
+    "Which of these languages do you speak that is your favourite? ",
   ];
   const answerList = [
     ["18-20", "21-23", "24-26", "27+"],
