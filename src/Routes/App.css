@@ -19,11 +19,12 @@
 }
 #submit-btn {
     margin: 20px;
-    padding: 6px 25px;
-    border: 1px solid rgb(117, 117, 117);
-    font-size: 18px;
+    padding: 8px 25px;
+    /* border: 1px solid rgb(117, 117, 117); */
+    border: none;
+    font-size: 17px;
     font-weight: 500;
     border-radius: 20px;
-    background-color: #e8c2ca;
+    background-color: #e5989b;
     cursor: pointer;
 }
