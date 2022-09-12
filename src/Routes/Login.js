@@ -16,6 +16,7 @@ export default function Login() {
                         id="login-logo-img"
                     />
                     <h1 id="title-logo">Friender</h1>
+                    <div>AN APP FOR FRIENDS</div>
                 </div>
                 <div className="login-box-bottom">
                     <div className="google-login-container">
